@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.GestionEmploi.GestionEmploiDepartementApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.17 s - in com.GestionEmploi.GestionEmploiDepartementApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.535 s - in com.GestionEmploi.GestionEmploiDepartementApplicationTests

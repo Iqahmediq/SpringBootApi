@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,5 +32,11 @@ List <Department> Departments(){
 @GetMapping("/departments/{id}")
 Department getOneDepartment(@PathVariable long id) {
 return this.departmentService.findOneDepartment(id)	;
+}
+@PutMapping("/departments/{id}")
+void updateDepartment(@PathVariable long id, @RequestBody DepartmentModel model) {
+    Department department = this.departmentService.findOneDepartment(id);
+    department.setDepartmentName(model.getDepartmentName());
+    this.departmentService.updateDepartment(department);
 }
 }

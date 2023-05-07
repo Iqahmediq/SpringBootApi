@@ -26,5 +26,9 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public Department findOneDepartment(long id) {
 		return this.departmentRepository.findById(id).get();
 	}
+    @Override
+    public void updateDepartment(Department d) {
+        this.departmentRepository.save(d);
+    }
 
 }

@@ -27,5 +27,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Employee getOneEmployee(long id) {
 		return this.employeeRepository.findById(id).get();
 	}
+	@Override
+	public void deleteEmployee(long id) {
+	    this.employeeRepository.deleteById(id);
+	}
+	@Override
+    public void updateEmployee(long id, Employee e) {
+        Employee existingEmployee = this.employeeRepository.findById(id).get();
+        existingEmployee.setEmployeeFirstName(e.getEmployeeFirstName());
+        existingEmployee.setEmployeeLasttName(e.getEmployeeLasttName());
+        existingEmployee.setEmployeePhone(e.getEmployeePhone());
+        existingEmployee.setDepartment(e.getDepartment());
+
+        this.employeeRepository.save(existingEmployee);
+    }   
 	
 }

@@ -8,4 +8,5 @@ public interface DepartmentService {
 void createDepartment(Department d);
 List<Department> findDepartments();
 Department findOneDepartment(long id);
+void updateDepartment(Department d);
 }
