@@ -16,6 +16,12 @@ public class Department implements Serializable{
 @GeneratedValue( strategy = GenerationType.IDENTITY)
 private Long id;
 private String departmentName;
+public Long getId() {
+return id;
+}
+public void setId(Long id) {
+this.id = id;
+}
 @JsonBackReference
 @OneToMany(mappedBy="department")
 Collection<Employee> employees=new ArrayList<>();
